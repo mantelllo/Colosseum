@@ -55,8 +55,8 @@ public:
     struct AngleRatePid
     {
         //max_xxx_rate > 5 would introduce wobble/oscillations
-        const float kMaxLimit = 2.5f;
-        const float kP = 0.25f;
+        const float kMaxLimit = 1.0f;
+        const float kP = 0.10f;
         const float kI = 0.0f;
         const float kD = 0.0f;
 

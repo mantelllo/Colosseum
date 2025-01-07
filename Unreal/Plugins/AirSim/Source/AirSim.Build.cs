@@ -43,6 +43,7 @@ public class AirSim : ModuleRules
     private void SetupCompileMode(CompileMode mode, ReadOnlyTargetRules Target)
     {
         LoadAirSimDependency(Target, "MavLinkCom", "MavLinkCom");
+        AddLibDependency("AirLib", Path.Combine(AirLibPath, "lib"), "AirLib", Target, false);
 
         switch (mode)
         {

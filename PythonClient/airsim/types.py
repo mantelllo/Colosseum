@@ -27,7 +27,8 @@ class MsgpackMixin:
     def from_msgpack(cls, encoded):
         obj = cls()
         if len(encoded) != len(cls.attribute_order):
-            raise ValueError("Length of encoded data does not match number of attributes")
+            raise ValueError("Length of encoded data does not match number of attributes: " +
+                f"{len(encoded)} vs {len(cls.attribute_order)}")
 
         for index, (attr_name, attr_type) in enumerate(cls.attribute_order):
             value = encoded[index]
@@ -330,11 +331,11 @@ class Pose(MsgpackMixin):
 
 class CollisionInfo(MsgpackMixin):
     has_collided = False
+    penetration_depth = 0.0
+    time_stamp = 0.0
     normal = Vector3r()
     impact_point = Vector3r()
     position = Vector3r()
-    penetration_depth = 0.0
-    time_stamp = 0.0
     object_name = ""
     object_id = -1
 

@@ -402,3 +402,8 @@ PythonClient/docs/_build
 
 # clangd generated folder, for e.g. from VSCode clangd extension
 .cache/
+Unreal/Environments/BlocksV2/.idea/
+Unreal/Environments/BlocksV2/Game/
+Unreal/Environments/BlocksV2/Plugins/
+cmake/cmake-build-debug/
+**/.idea/
