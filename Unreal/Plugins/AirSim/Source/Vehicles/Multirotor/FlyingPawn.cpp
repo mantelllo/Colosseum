@@ -15,6 +15,7 @@ void AFlyingPawn::BeginPlay()
     Super::BeginPlay();
 }
 
+
 void AFlyingPawn::initializeForBeginPlay()
 {
     //get references of existing camera
